@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJH</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        .dark {
+            --tw-bg-opacity: 1;
+            background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
+            --tw-text-opacity: 1;
+            color: rgba(229, 231, 235, var(--tw-text-opacity));
+        }
+        .dark .card {
+            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+        }
+        .card {
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
+    <div class="max-w-5xl mx-auto px-4 py-8">
+        <!-- Navbar -->
+        <nav class="flex justify-between items-center mb-16">
+            <div class="text-2xl font-bold">AJH</div>
+            <div class="flex space-x-6">
+                <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
+                <a href="#services" class="hover:text-blue-500 transition-colors">Services</a>
+                <a href="#portfolio" class="hover:text-blue-500 transition-colors">Portfolio</a>
+                <button id="themeToggle" class="focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- About Section -->
+        <section id="about" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6">About Me</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <p class="mb-6 leading-relaxed">
+                        Hi, I'm AJH, a passionate designer and developer with over 5 years of experience creating beautiful, functional digital experiences. I specialize in creating clean, minimal designs that focus on user experience while maintaining modern aesthetics and performance.
+                    </p>
+                    <h3 class="text-xl font-semibold mb-3">Skills & Expertise</h3>
+                    <ul class="list-disc pl-5 mb-6 space-y-2">
+                        <li>UI/UX Design</li>
+                        <li>Frontend Development</li>
+                        <li>Responsive Web Design</li>
+                        <li>Brand Identity</li>
+                        <li>Design Systems</li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
+                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-dribbble"></i></a>
+                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center p-6">
+                    <div class="text-center">
+                        <div class="text-7xl mb-3"><i class="fas fa-user-circle"></i></div>
+                        <p class="text-lg font-medium">AJH</p>
+                        <p class="text-sm">Designer & Developer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="mb-24">
+            <h2 class="text-3xl font-bold mb-6">Services</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-paint-brush"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Creating intuitive and engaging user experiences with a focus on usability and aesthetics.</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-code"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Building responsive, performant websites with clean code and modern technologies.</p>
+                </div>
+                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-bullhorn"></i></div>
+                    <h3 class="text-xl font-semibold mb-2">Brand Identity</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Developing cohesive brand systems that communicate your unique value proposition.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="mb-16">
+            <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="card overflow-hidden rounded-lg shadow-lg">
+                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-gray-800">
+                        <h3 class="font-bold text-lg mb-2">E-commerce Redesign</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">UI/UX Design, Frontend Development</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    </div>
+                </div>
+                <div class="card overflow-hidden rounded-lg shadow-lg">
+                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-gray-800">
+                        <h3 class="font-bold text-lg mb-2">Finance Dashboard</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">UI Design, Data Visualization</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    </div>
+                </div>
+                <div class="card overflow-hidden rounded-lg shadow-lg">
+                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-gray-800">
+                        <h3 class="font-bold text-lg mb-2">Travel App</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Mobile Design, Frontend Development</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    </div>
+                </div>
+                <div class="card overflow-hidden rounded-lg shadow-lg">
+                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+                    </div>
+                    <div class="p-4 bg-white dark:bg-gray-800">
+                        <h3 class="font-bold text-lg mb-2">Creative Agency Website</h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Web Design, Brand Identity</p>
+                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
+            <p>© 2025 AJH. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+        
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            body.classList.add('dark');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            
+            if (body.classList.contains('dark')) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
