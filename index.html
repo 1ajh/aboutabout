@@ -1,174 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJH</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <title>ajh</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ajh">
+        <meta property="og:description" content="About me">
+        <meta property="og:image" content="https://ajh.quest/icon.png">
+        <meta property="og:url" content="https://ajh.quest">
+    
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="ajh">
+        <meta name="twitter:description" content="About me">
+        <meta name="twitter:image" content="icon.png">
+    
+        <!-- Discord Embed -->
+        <meta property="og:site_name" content="ajh">
+        <meta name="theme-color" content="#000000">
     <style>
-        .dark {
-            --tw-bg-opacity: 1;
-            background-color: rgba(17, 24, 39, var(--tw-bg-opacity));
-            --tw-text-opacity: 1;
-            color: rgba(229, 231, 235, var(--tw-text-opacity));
+        body {
+            font-family: 'Inter', sans-serif;
         }
-        .dark .card {
-            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+        h1, h2, h3, .logo {
+            font-family: 'Playfair Display', serif;
         }
         .card {
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .service-card {
+            background-color: #f9f9f9;
+            border-left: 3px solid #3b82f6;
+        }
+        .portfolio-card {
+            background-color: white;
+        }
+        .portfolio-img {
+            background-color: #f0f4f8;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 transition-colors duration-300">
-    <div class="max-w-5xl mx-auto px-4 py-8">
+<body class="bg-white text-gray-800">
+    <div class="max-w-5xl mx-auto">
         <!-- Navbar -->
-        <nav class="flex justify-between items-center mb-16">
-            <div class="text-2xl font-bold">AJH</div>
-            <div class="flex space-x-6">
-                <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
-                <a href="#services" class="hover:text-blue-500 transition-colors">Services</a>
-                <a href="#portfolio" class="hover:text-blue-500 transition-colors">Portfolio</a>
-                <button id="themeToggle" class="focus:outline-none">
-                    <i class="fas fa-moon"></i>
-                </button>
+        <nav class="flex justify-between items-center mb-10 sticky top-0 bg-white py-8 z-50">
+            <div class="flex space-x-8">
+                <a href="#" class="hover:text-blue-500 transition-colors font-medium">About</a>
+                <a href="#services" class="hover:text-blue-500 transition-colors font-medium">Services</a>
+                <a href="#portfolio" class="hover:text-blue-500 transition-colors font-medium">Portfolio</a>
             </div>
         </nav>
 
         <!-- About Section -->
-        <section id="about" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <p class="mb-6 leading-relaxed">
-                        Hi, I'm AJH, a passionate designer and developer with over 5 years of experience creating beautiful, functional digital experiences. I specialize in creating clean, minimal designs that focus on user experience while maintaining modern aesthetics and performance.
+        <section id="about" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">ajh</h2>
+            <div class="grid md:grid-cols-5 gap-10">
+                <div class="col-span-3">
+                    <p class="mb-8 leading-relaxed text-gray-700 text-lg">
+                        Hi, I'm ajh, a passionate designer and developer with over 5 years of experience creating beautiful, functional digital experiences. I specialize in creating clean, minimal designs that focus on user experience while maintaining modern aesthetics and performance.
                     </p>
-                    <h3 class="text-xl font-semibold mb-3">Skills & Expertise</h3>
-                    <ul class="list-disc pl-5 mb-6 space-y-2">
-                        <li>UI/UX Design</li>
-                        <li>Frontend Development</li>
-                        <li>Responsive Web Design</li>
-                        <li>Brand Identity</li>
-                        <li>Design Systems</li>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Skills & Expertise</h3>
+                    <ul class="list-disc pl-5 mb-8 space-y-2 text-gray-700">
+                        <li>UI/UX and graphic design</li>
+                        <li>Full-stack web, Discord bot, and console program development</li>
+                        <li>Server, database, and domain management</li>
+                        <li>Music production and record label management</li>
+                        <li>Cloud computing, deployment, CMS</li>
                     </ul>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-dribbble"></i></a>
-                        <a href="#" class="text-xl hover:text-blue-600 transition-colors"><i class="fab fa-behance"></i></a>
+                    <div class="flex space-x-5">
+                        <a href="https://djajh.bandcamp.com/" class="text-2xl hover:text-blue-600 transition-colors text-gray-600"><i class="fab fa-bandcamp"></i></a>
+                        <a href="https://github.com/1ajh" class="text-2xl hover:text-blue-600 transition-colors text-gray-600"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.gg/UnDrzQQksw" class="text-2xl hover:text-blue-600 transition-colors text-gray-600"><i class="fab fa-discord"></i></a>
+                        <a href="mailto:aj@ajhmath.org" class="text-2xl hover:text-blue-600 transition-colors text-gray-600"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
-                <div class="bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center p-6">
-                    <div class="text-center">
-                        <div class="text-7xl mb-3"><i class="fas fa-user-circle"></i></div>
-                        <p class="text-lg font-medium">AJH</p>
-                        <p class="text-sm">Designer & Developer</p>
-                    </div>
+                <div class="col-span-2">
+                    <img class="rounded-lg" src="/icon.png">
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="mb-24">
-            <h2 class="text-3xl font-bold mb-6">Services</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-paint-brush"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">UI/UX Design</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Creating intuitive and engaging user experiences with a focus on usability and aesthetics.</p>
+        <section id="services" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="service-card card p-6 rounded-lg shadow-sm">
+                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-music"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Music Production and Management</h3>
+                    <p class="text-gray-600">Intuitive with bringing new artists into orbit and my own material. I work with electronic music.</p>
                 </div>
-                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+                <div class="service-card card p-6 rounded-lg shadow-sm">
                     <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-code"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Web Development</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Building responsive, performant websites with clean code and modern technologies.</p>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Web Development</h3>
+                    <p class="text-gray-600">Building responsive, performant websites with clean code and modern technologies, like web proxies, BYOD, etc.</p>
                 </div>
-                <div class="card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-bullhorn"></i></div>
-                    <h3 class="text-xl font-semibold mb-2">Brand Identity</h3>
-                    <p class="text-gray-600 dark:text-gray-300">Developing cohesive brand systems that communicate your unique value proposition.</p>
+                <div class="service-card card p-6 rounded-lg shadow-sm">
+                    <div class="text-3xl text-blue-500 mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-800">Discord Bot Development</h3>
+                    <p class="text-gray-600">Developing Discord bots with functionality in mind to help users.</p>
                 </div>
             </div>
         </section>
 
         <!-- Portfolio Section -->
-        <section id="portfolio" class="mb-16">
-            <h2 class="text-3xl font-bold mb-6">Portfolio</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="card overflow-hidden rounded-lg shadow-lg">
-                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+        <section id="portfolio" class="mb-20">
+            <h2 class="text-4xl font-bold mb-8 text-gray-900">Portfolio</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="portfolio-card card overflow-hidden rounded-lg shadow-md">
+                    <div class="portfolio-img h-56 flex items-center justify-center">
+                        <img class="h-56" src="https://edu.ajh.college/home/icon.png">
                     </div>
-                    <div class="p-4 bg-white dark:bg-gray-800">
-                        <h3 class="font-bold text-lg mb-2">E-commerce Redesign</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">UI/UX Design, Frontend Development</p>
-                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
-                    </div>
-                </div>
-                <div class="card overflow-hidden rounded-lg shadow-lg">
-                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-gray-800">
-                        <h3 class="font-bold text-lg mb-2">Finance Dashboard</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">UI Design, Data Visualization</p>
-                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">AJH's Vault</h3>
+                        <p class="text-gray-600 mb-4">My longest running project, Vault is a website that contains games, apps, and a proxy to bypsass internet censorship. A seventh version is anticipated to release this spring.</p>
+                        <a href="https://edu.ajh.college" class="text-blue-500 inline-flex items-center hover:underline">View <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                     </div>
                 </div>
-                <div class="card overflow-hidden rounded-lg shadow-lg">
-                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
+                <div class="portfolio-card card overflow-hidden rounded-lg shadow-md">
+                    <div class="portfolio-img h-56 flex items-center justify-center">
+                        <i class="fas fa-image text-4xl text-gray-400"></i>
                     </div>
-                    <div class="p-4 bg-white dark:bg-gray-800">
-                        <h3 class="font-bold text-lg mb-2">Travel App</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Mobile Design, Frontend Development</p>
-                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
-                    </div>
-                </div>
-                <div class="card overflow-hidden rounded-lg shadow-lg">
-                    <div class="bg-gray-300 dark:bg-gray-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-image text-4xl text-gray-500 dark:text-gray-400"></i>
-                    </div>
-                    <div class="p-4 bg-white dark:bg-gray-800">
-                        <h3 class="font-bold text-lg mb-2">Creative Agency Website</h3>
-                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Web Design, Brand Identity</p>
-                        <a href="#" class="text-blue-500 text-sm hover:underline">View Project →</a>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2 text-gray-800">Endis</h3>
+                        <p class="text-gray-600 mb-4">Endis is a Discord bot that aims to combine features of other bots to make it extremely versatile and useful. It includes economy, AFK, and fun commands.</p>
+                        <a href="#" class="text-blue-500 inline-flex items-center hover:underline">View <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
                     </div>
                 </div>
+                    <div class="portfolio-card card overflow-hidden rounded-lg shadow-md">
+                        <div class="portfolio-img h-56 flex items-center justify-center">
+                            <i class="fas fa-image text-4xl text-gray-400"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-gray-800">Nihility</h3>
+                            <p class="text-gray-600 mb-4">Nihility is a record label that encompasses all forms of electronic music.</p>
+                            <a href="https://nihility.ajh.quest" class="text-blue-500 inline-flex items-center hover:underline">View <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                        </div>
+                        </div>
+                </div> 
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
-            <p>© 2025 AJH. All rights reserved.</p>
+        <footer class="pt-10 border-t border-gray-200 text-center text-sm text-gray-500 mt-12 mb-10">
+            <p>© 2025 ajh. All rights reserved.
+                <span class="px-2">●</span> 
+                Contact: <a href="mailto:aj@ajhmath.org">aj@ajhmath.org</a></p>
+            <p class="mt-2">
+                <a href="https://ajhmath.org">ajhmath.org</a><span class="px-2">●</span>
+                <a href="https://ajh.boats">ajh.boats</a><span class="px-2">●</span>
+                <a href="https://ajh.college">ajh.college</a><span class="px-2">●</span>
+                <a href="https://ajh.quest">ajh.quest</a>
+            </p>
         </footer>
     </div>
-
-    <script>
-        const themeToggle = document.getElementById('themeToggle');
-        const body = document.body;
-        const icon = themeToggle.querySelector('i');
-        
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            body.classList.add('dark');
-            icon.classList.replace('fa-moon', 'fa-sun');
-        }
-        
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            
-            if (body.classList.contains('dark')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
 </body>
 </html>
